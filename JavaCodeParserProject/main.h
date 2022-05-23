@@ -70,3 +70,28 @@ void splitCodeIntoElements();
  * \param
  */
 void formingXMLDocumnt();
+
+/*! Проверяет на наличие ошибок
+ * \param
+ */
+void checkingForErrors();
+
+/*! Выделяет импорты из кода программы
+ * \param
+ */
+void selectImportsFromTheProgramm();
+
+/*! Выделяет классы из кода программы
+ * \param
+ */
+void selectClassFromTheProgramm();
+
+/*! Выделяет интерфейсы из кода программы
+ * \param
+ */
+void selectInterfaceFromTheProgramm();
+
+/*! Выделяет методы из кода программы
+ * \param
+ */
+void selectMethodFromTheProgramm();
