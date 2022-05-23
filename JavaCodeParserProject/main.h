@@ -10,18 +10,18 @@ struct Class
 {
     QString nameClass;
     QString accessModeClass;
-    QList<QString> annatationsClass;
+    //QList<QString> annatationsClass;
     QList<QString> bodyClassStr;
     int numberClass;
     int countMethod;
     int countBodyStrClass;
-//    struct Annitatins *annatationsClass;
+    struct Annotations *annatationsClass;
 };
 
-//struct Annotations
-//{
-//    QString name;
-//};
+struct Annotations
+{
+    QString name;
+};
 
 struct Methods
 {
@@ -29,15 +29,16 @@ struct Methods
     QString accessModeMethod;
     QString modifierMrthod;
     QString typeValueMthod;
-    struct Argements *argumentsMehod;
-    QList<QString> annatationsMethod;
+    struct Arguments *argumentsMehod;
+    //QList<QString> annatationsMethod;
     QList<QString> bodyMethodStr;
     int numberMethod;
     int countBodyStrMethod;
+    struct Annotations *annatationsMethods;
 
 };
 
-struct Argements
+struct Arguments
 {
     QString name;
     QString type;
@@ -54,3 +55,18 @@ struct Interface
     QList<QString> bodyInterfaceStr;
     int numberInterface;
 };
+
+/*! Копирует данные из файла в массив строк
+ * \param
+ */
+void copyData();
+
+/*! Разбиавает код на элементы
+ * \param
+ */
+void splitCodeIntoElements();
+
+/*! Формирует документ xml расширения
+ * \param
+ */
+void formingXMLDocumnt();
