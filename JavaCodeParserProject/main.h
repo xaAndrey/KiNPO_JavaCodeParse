@@ -6,54 +6,122 @@
 
 #endif // MAIN_H
 
-struct Class
+class Annotations
 {
+private:
+    QString name;
+
+public:
+    void setName(QString name);
+
+    QString getName();
+};
+
+
+class Class
+{
+private:
     QString nameClass;
     QString accessModeClass;
-    //QList<QString> annatationsClass;
     QList<QString> bodyClassStr;
     int numberClass;
     int countMethod;
     int countBodyStrClass;
-    struct Annotations *annatationsClass;
+    Annotations annotationsClass;
+
+public:
+    void setNameCLass(QString nameClass);
+    void setAccessModeClass(QString accessModeClass);
+    void setBodyClassStr(QList<QString> bodyClassStr);
+    void setNumberClass(int numberClass);
+    void setCountMethod(int countMethod);
+    void setCountBodyStrClass(int countBodyStrClass);
+    void setAnnotationsClass(Annotations annatationsClass);
+
+    QString getNameClass();
+    QString getAsccessModelClass();
+    QList<QString> getBodyClass();
+    int getNumberClass();
+    int getCountMethod();
+    int getCountBodyStrClass();
+    Annotations getAnnotationsClass();
 };
 
-struct Annotations
+class Arguments
 {
+private:
     QString name;
+    QString type;
+
+public:
+    void setName(QString name);
+    void setType(QString type);
+
+    QString getName();
+    QString getType();
 };
 
-struct Methods
+class Methods
 {
+private:
     QString nameMethod;
     QString accessModeMethod;
-    QString modifierMrthod;
-    QString typeValueMthod;
-    struct Arguments *argumentsMehod;
-    //QList<QString> annatationsMethod;
+    QString modifierMethod;
+    QString typeValueMethod;
+    Arguments argumentsMethod;
     QList<QString> bodyMethodStr;
     int numberMethod;
     int countBodyStrMethod;
-    struct Annotations *annatationsMethods;
+    Annotations annatationsMethods;
 
+public:
+    void setNameMethods(QString nameMethod);
+    void setAccessModeMethod(QString accessModeMethod);
+    void setModifierMethod(QString modifierMethod);
+    void setTypeValueMethod(QString typeValueMethod);
+    void setArgumentsMethod(Arguments argumentsMethod);
+    void setBodyMethodStr(QList<QString> bodyMethodStr);
+    void setNumberMethod(int numberMethod);
+    void setCountBodyStrMethod(int countBodyStrMethod);
+    void setAnnatationsMethods(Annotations annatationsMethods);
+
+    QString getNameMethods();
+    QString getAccessModeMethod();
+    QString getModifierMethod();
+    QString getTypeValueMethod();
+    Arguments getArgumentsMethod();
+    QList<QString> getBodyMethodStr();
+    int getNumberMethod();
+    int getCountBodyStrMethod();
+    Annotations getAnnotationsMethods();
 };
 
-struct Arguments
+class Improts
 {
+private:
     QString name;
-    QString type;
+
+public:
+    void setName(QString name);
+
+    QString getName();
 };
 
-struct Improts
+class Interface
 {
-    QString name;
-};
-
-struct Interface
-{
+private:
     QString name;
     QList<QString> bodyInterfaceStr;
     int numberInterface;
+
+public:
+    void setName(QString name);
+    void setBodyInterfaceStr(QList<QString>);
+    void setNumberInterface(int numberIterface);
+
+    QString getName();
+    QList<QString> getBodyInterfaceStr();
+    int getNumberInterface();
 };
 
 /*! Копирует данные из файла в массив строк
