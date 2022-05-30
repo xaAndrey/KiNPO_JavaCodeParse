@@ -6,6 +6,7 @@
 
 #endif // MAIN_H
 
+<<<<<<< HEAD
 class Annotations
 {
 private:
@@ -23,10 +24,18 @@ class Class
 private:
     QString nameClass;
     QString accessModeClass;
+=======
+struct Class
+{
+    QString nameClass;
+    QString accessModeClass;
+    //QList<QString> annatationsClass;
+>>>>>>> remotes/origin/main
     QList<QString> bodyClassStr;
     int numberClass;
     int countMethod;
     int countBodyStrClass;
+<<<<<<< HEAD
     Annotations annotationsClass;
 
 public:
@@ -122,6 +131,47 @@ public:
     QString getName();
     QList<QString> getBodyInterfaceStr();
     int getNumberInterface();
+=======
+    struct Annotations *annatationsClass;
+};
+
+struct Annotations
+{
+    QString name;
+};
+
+struct Methods
+{
+    QString nameMethod;
+    QString accessModeMethod;
+    QString modifierMrthod;
+    QString typeValueMthod;
+    struct Arguments *argumentsMehod;
+    //QList<QString> annatationsMethod;
+    QList<QString> bodyMethodStr;
+    int numberMethod;
+    int countBodyStrMethod;
+    struct Annotations *annatationsMethods;
+
+};
+
+struct Arguments
+{
+    QString name;
+    QString type;
+};
+
+struct Improts
+{
+    QString name;
+};
+
+struct Interface
+{
+    QString name;
+    QList<QString> bodyInterfaceStr;
+    int numberInterface;
+>>>>>>> remotes/origin/main
 };
 
 /*! Копирует данные из файла в массив строк
